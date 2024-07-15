@@ -13,6 +13,12 @@ Before you start, ensure you have:
 
 Before building the docker image make sure your project is donne and runs properly on you locale machine.
 
+If you have an working openai_API key, you can Fork this project and run a quick test. You can proceed to build the docker image directly after forking the code source
+
+```bash
+git clone https://github.com/Tijame98/Bot_niceGUI.git
+```
+
 The next step would be to reorginazed your project (create requirements.txt, the Procfile, .env file for example) 
 
 ### Step 1: Building Docker Image For the Project
