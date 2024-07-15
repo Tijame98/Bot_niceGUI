@@ -63,7 +63,7 @@ def main():
                 'Please provide your OPENAI key in the Python script first!'
             text = ui.input(placeholder=placeholder).props('rounded outlined input-class=mx-3') \
                 .classes('w-full self-center').on('keydown.enter', send)
-        ui.markdown('simple chat bot built with [NiceGUI](https://nicegui.io) by Houssine Majite') \
+        ui.markdown('simple chat bot built with [NiceGUI](https://nicegui.io) by Tijame') \
             .classes('text-xs self-end mr-8 m-[-1em] text-primary')
 
 
