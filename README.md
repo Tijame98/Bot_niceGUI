@@ -50,62 +50,62 @@ If you have an working openai_API key, you can Fork this project and run a quick
 Go to your project directory and create a Dockerfile (for example file.dockerfile) in wish you need to specifie what command should be run within your code source for your application.
 For example in this example my dockerfile was as following :
 
-```bash
-# Use an official Python runtime as a parent image
-FROM python:3.8-slim
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy the current directory contents into the container at /app
-COPY . /app
-
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
-
-# Run app.py when the container launches
-CMD ["python", "main.py"]
-
-```
+   ```bash
+   # Use an official Python runtime as a parent image
+   FROM python:3.8-slim
+   
+   # Set the working directory in the container
+   WORKDIR /app
+   
+   # Copy the current directory contents into the container at /app
+   COPY . /app
+   
+   # Install any needed packages specified in requirements.txt
+   RUN pip install --no-cache-dir -r requirements.txt
+   
+   
+   # Run app.py when the container launches
+   CMD ["python", "main.py"]
+   
+   ```
 
 Then you can run the command below to build the docker image
-```bash
-sudo docker build -t image_name -f file.dockerfile .
-
-```
+   ```bash
+   sudo docker build -t image_name -f file.dockerfile .
+   
+   ```
 Test your dockerized application by running the command below
 
-```bash
-sudo docker run image_name
-```
+   ```bash
+   sudo docker run image_name
+   ```
 
 ### Step 2: Heroku CLI and Container Registry Login
 
 You need to run the commands below in your terminal to log in to Heroku and the Heroku Container Registry
 
-```bash
-sudo heroku login
-sudo heroku container:login
-```
+   ```bash
+   sudo heroku login
+   sudo heroku container:login
+   ```
 
 These commands log you into the Heroku CLI and Heroku Container Registry, necessary for pushing and releasing Docker containers.
 
 ### Step 3: Create a New Heroku Application
 
 
-```bash
-sudo heroku create app_name
-```
+   ```bash
+   sudo heroku create app_name
+   ```
 
 This command will output the URL and repository for your new Heroku app, like so:
 
 - **Expected Output**
 
-```bash
-Creating app... done, ⬢ your-app-name
-https://your-app-name.herokuapp.com/ | https://git.heroku.com/your-app-name.git
-```
+   ```bash
+   Creating app... done, ⬢ your-app-name
+   https://your-app-name.herokuapp.com/ | https://git.heroku.com/your-app-name.git
+   ```
 
 ### step 4: Tag Your Docker Image
 
@@ -116,30 +116,30 @@ app_name = "your-app-name"
 
 Replace with the name provided by the `heroku create` command
 
-```bash
-sudo docker tag image_name registry.heroku.com/app_name/web
-```
+   ```bash
+   sudo docker tag image_name registry.heroku.com/app_name/web
+   ```
 
 ### step 5: Push the Docker Image to Heroku
 
-```bash
-sudo docker push registry.heroku.com/app_name/web
-```
+   ```bash
+   sudo docker push registry.heroku.com/app_name/web
+   ```
 
 ### step 6: Release the Image on Heroku
 
-```bash
-sudo heroku container:release web -a app_name
-```
+   ```bash
+   sudo heroku container:release web -a app_name
+   ```
 ### step 7: Open Your Deployed Application
 
-```bash
-sudo heroku open -a app_name
-```
+   ```bash
+   sudo heroku open -a app_name
+   ```
 
 ### Check Logs
 
-```bash
-sudo heroku logs --tail -a app_name
-```
+   ```bash
+   sudo heroku logs --tail -a app_name
+   ```
 You can check my results. There is the link for my [Sales Bot](https://moosach-b33cdda8a16a.herokuapp.com/)
