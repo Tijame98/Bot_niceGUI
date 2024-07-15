@@ -11,15 +11,39 @@ Before you start, ensure you have:
 
 ## Deployment Process
 
-Before building the docker image make sure your project is donne and runs properly on you locale machine.
+Before building the docker image make sure your project is donne and runs properly on your locale machine.
+The next step would be to reorginazed your project (create requirements.txt, the Procfile, .env file for example) 
+
+### Run this project localy on your machine
 
 If you have an working openai_API key, you can Fork this project and run a quick test. You can proceed to build the docker image directly after forking the code source
+
+1. **Create and Activate a Virtual Environment**
+   ```bash
+   python3 -m venv Sales_Bot
+   ```
+   ```bash
+   cd Sales_Bot
+   ```
+   ```bash
+   source bin/activate
+   ```
+2. **Clone the Repository in the venv dir**
 
 ```bash
 git clone https://github.com/Tijame98/Bot_niceGUI.git
 ```
-
-The next step would be to reorginazed your project (create requirements.txt, the Procfile, .env file for example) 
+```bash
+cd Bot_niceGUI
+```
+3. **Install the Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Run the App**
+   ```bash
+   ./main.py
+   ```
 
 ### Step 1: Building Docker Image For the Project
 
