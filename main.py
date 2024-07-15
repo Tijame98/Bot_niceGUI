@@ -4,7 +4,7 @@ from log_callback_handler import NiceGuiLogElementCallbackHandler
 
 from nicegui import ui
 
-OPENAI_API_KEY = "sk-proj-i3eIo6ujjtATFRz4RQvRT3BlbkFJfxr9nY3u5ofM3FrDOfP3"  # TODO: set your OpenAI API key here
+OPENAI_API_KEY = TODO: set your OpenAI API key here
 
 
 @ui.page('/')
@@ -59,7 +59,7 @@ def main():
 
     with ui.footer().classes('bg-white'), ui.column().classes('w-full max-w-3xl mx-auto my-6'):
         with ui.row().classes('w-full no-wrap items-center'):
-            placeholder = 'message' if OPENAI_API_KEY != "sk-proj-i3eIo6ujjtATFRz4RQvRT3BlbkFJfxr9nY3u5ofM3FrDOfP3" else \
+            placeholder = 'message' if OPENAI_API_KEY != TODO else \
                 'Please provide your OPENAI key in the Python script first!'
             text = ui.input(placeholder=placeholder).props('rounded outlined input-class=mx-3') \
                 .classes('w-full self-center').on('keydown.enter', send)
