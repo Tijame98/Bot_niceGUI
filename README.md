@@ -112,3 +112,4 @@ sudo heroku open -a app_name
 ```bash
 sudo heroku logs --tail -a app_name
 ```
+There is the link for my [Sales Bot](https://moosach-b33cdda8a16a.herokuapp.com/)
