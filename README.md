@@ -30,19 +30,19 @@ If you have an working openai_API key, you can Fork this project and run a quick
    ```
 2. **Clone the Repository in the venv dir**
 
-```bash
-git clone https://github.com/Tijame98/Bot_niceGUI.git
-```
-```bash
-cd Bot_niceGUI
-```
+   ```bash
+   git clone https://github.com/Tijame98/Bot_niceGUI.git
+   ```
+   ```bash
+   cd Bot_niceGUI
+   ```
 3. **Install the Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 4. **Run the App**
    ```bash
-   ./main.py
+   python3 main.py
    ```
 
 ### Step 1: Building Docker Image For the Project
